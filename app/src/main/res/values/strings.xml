@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">PBP-android</string>
+    <string name="txt_dont_have_account">Dont Have an Account</string>
+    <string name="txt_sign_up">Sign Up</string>
+    <string name="txt_username">Username</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_login">Login</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="empty_string"></string>
+    <string name="txt_nama">Nama</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_register">Register</string>
+    <string name="txt_nama_makul">Nama Makul</string>
+    <string name="txt_nama_dosen">Nama Dosen</string>
+</resources>
