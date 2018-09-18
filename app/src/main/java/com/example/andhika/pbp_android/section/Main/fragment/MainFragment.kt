@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.example.andhika.pbp_android.R
 import com.example.andhika.pbp_android.common.GeneralRecyclerViewAdapter
 import com.example.andhika.pbp_android.model.Makul
+import com.example.andhika.pbp_android.showShortToast
 import dagger.android.support.DaggerFragment
 import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.android.synthetic.main.viewholder_makul.view.*
@@ -50,11 +51,11 @@ class MainFragment : DaggerFragment(), MainView {
     }
 
     override fun showError(any: Any) {
-    }
-
-    override fun getListMakul() {
+        activity?.showShortToast(any.toString())
     }
 
     override fun setPresenter(presenter: MainFragmentPresenter) {
+        this.presenter = presenter
+        lifecycle.addObserver(this.presenter)
     }
 }
