@@ -18,4 +18,11 @@
     <string name="txt_register">Register</string>
     <string name="txt_nama_makul">Nama Makul</string>
     <string name="txt_nama_dosen">Nama Dosen</string>
+    <string name="detailMakul">Pengembangan Berbasis Platform</string>
+    <string name="txt_lokasi">Lokasi</string>
+    <string name="title_dosen">Dosen</string>
+    <string name="txt_subject">Edit Subject</string>
+    <string name="txt_edit_profile">Edit Profile</string>
+    <string name="txt_add">Add</string>
+    <string name="txt_add_event">Add Event</string>
 </resources>

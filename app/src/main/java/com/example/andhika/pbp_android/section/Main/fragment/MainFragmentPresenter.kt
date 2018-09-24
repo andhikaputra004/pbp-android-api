@@ -1,7 +1,9 @@
 package com.example.andhika.pbp_android.section.Main.fragment
 
 import com.example.andhika.pbp_android.base.BasePresenter
+import com.example.andhika.pbp_android.di.FragmentScoped
 import com.example.andhika.pbp_android.network.NetworkManager
+import javax.inject.Inject
 
 class MainFragmentPresenter(val networkManager: NetworkManager, val view: MainView) : BasePresenter() {
 
@@ -24,6 +26,10 @@ class MainFragmentPresenter(val networkManager: NetworkManager, val view: MainVi
             view.dismissLoading()
             view.showError(it)
         }))
+    }
+
+    fun start() {
+        view.loadMainFragment()
     }
 
 }

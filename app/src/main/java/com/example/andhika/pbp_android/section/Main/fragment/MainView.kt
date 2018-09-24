@@ -8,5 +8,6 @@ interface MainView {
     fun goToMain(response: List<Makul>)
     fun showError(any: Any)
     fun setPresenter(presenter: MainFragmentPresenter)
+    fun loadMainFragment()
 
 }

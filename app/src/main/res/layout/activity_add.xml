@@ -2,8 +2,16 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/green"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
+    <include
+        android:id="@+id/toolbar_layout_add"
+        layout="@layout/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
     <android.support.design.widget.TextInputLayout
         android:id="@+id/til_nama_makul"
         android:layout_width="@dimen/dimen_0dp"
@@ -13,7 +21,7 @@
         android:layout_marginTop="@dimen/dimen_50dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_layout">
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout_add">
 
         <EditText
             android:id="@+id/et_nama_makul"
@@ -56,18 +64,18 @@
             android:id="@+id/et_lokasi_makul"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/txt_password"
+            android:hint="@string/txt_lokasi"
             />
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:id="@+id/btn_register"
+        android:id="@+id/btn_add"
         android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dimen_24dp"
         android:layout_marginRight="@dimen/dimen_24dp"
         android:layout_marginTop="@dimen/dimen_20dp"
-        android:text="@string/txt_register"
+        android:text="@string/txt_add"
         android:background="@drawable/btn_login"
         android:textColor="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"

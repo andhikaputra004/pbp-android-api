@@ -10,7 +10,7 @@ import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = arrayOf(AndroidSupportInjectionModule::class, NetworkModule::class, ActivityBuilder::class))
+@Component(modules = arrayOf(AndroidSupportInjectionModule::class, NetworkModule::class, ActivityBuilder::class,FragmentBuilder::class))
 interface AppComponent : AndroidInjector<DaggerApplication> {
     fun inject(pbpApp: PBPApp)
 
@@ -18,6 +18,8 @@ interface AppComponent : AndroidInjector<DaggerApplication> {
     interface Builder {
         @BindsInstance
         fun application(application: Application): Builder
+
+
         fun networkModule(networkModule: NetworkModule): Builder
         fun build(): AppComponent
     }

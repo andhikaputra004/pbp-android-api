@@ -53,7 +53,7 @@ class NetworkModule {
     @Provides
     @Singleton
     fun providesRetrofit(okHttpClient: OkHttpClient, gson: Gson) = Retrofit.Builder()
-            .baseUrl("http://192.168.43.150/pbp_api/index.php/")
+            .baseUrl("http://project-tf.xyz/index.php/")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(okHttpClient)

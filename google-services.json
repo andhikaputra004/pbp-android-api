@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "823302390461",
+    "firebase_url": "https://verifikasi-email.firebaseio.com",
+    "project_id": "verifikasi-email",
+    "storage_bucket": "verifikasi-email.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823302390461:android:261a8c545672c2a9",
+        "android_client_info": {
+          "package_name": "com.example.andhika.pbp_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823302390461-dbgesi7hrvvnp1qc2skccjn8uhpn73u2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.andhika.pbp_android",
+            "certificate_hash": "a25ee761487b9272f3671e9c6e7a6a6aa1ef8ed6"
+          }
+        },
+        {
+          "client_id": "823302390461-9gui71qsm22jvuopjo3gdu2njlg96085.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGaui9eX_bAkVxm9UoHzVrrajxX8lAxHc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823302390461-9gui71qsm22jvuopjo3gdu2njlg96085.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

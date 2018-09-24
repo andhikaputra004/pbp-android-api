@@ -10,7 +10,7 @@ data class RegisterResponse(
 )
 
 data class DataUser(
-    @SerializedName("id_user") val idUser: String?,
+    @SerializedName("id_user") val idUser: Int?,
     @SerializedName("nama_user") val namaUser: String?,
     @SerializedName("username") val username: String?,
     @SerializedName("password") val password: String?,

@@ -3,9 +3,10 @@ package com.example.andhika.pbp_android.section.Main
 import com.example.andhika.pbp_android.base.BasePresenter
 import com.example.andhika.pbp_android.di.ActivityScoped
 import com.example.andhika.pbp_android.network.NetworkManager
+import javax.inject.Inject
 
 @ActivityScoped
-class MainPresenter(val networkManager: NetworkManager) : BasePresenter(), MainContract.Presenter {
+class MainPresenter @Inject constructor(val networkManager: NetworkManager) : BasePresenter(), MainContract.Presenter {
     private var view: MainContract.View? = null
     override fun getListMakul() {
         compositeDisposable.add(networkManager.doGetListMakul({

@@ -28,7 +28,9 @@ class LoginPresenter @Inject constructor(val networkManager: NetworkManager) : B
         compositeDisposable.add(networkManager.doLogin(request, {
             when {
                 it.isSuccessful -> {
-                    view?.goToMain()
+                    it.body()?.let {
+                        view?.goToMain(it)
+                    }
                 }
             }
         }, {
