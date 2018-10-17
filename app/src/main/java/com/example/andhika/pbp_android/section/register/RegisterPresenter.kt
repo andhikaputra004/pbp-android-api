@@ -18,7 +18,9 @@ class RegisterPresenter @Inject constructor(val networkManager: NetworkManager) 
         compositeDisposable.add(networkManager.doRegister(request, {
             when {
                 it.isSuccessful -> {
-                    view?.goToMain()
+                    it.body()?.let {
+                        view?.goToMain(it)
+                    }
                 }
             }
         }, {

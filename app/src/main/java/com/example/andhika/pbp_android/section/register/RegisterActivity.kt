@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.example.andhika.pbp_android.R
 import com.example.andhika.pbp_android.base.BaseActivity
 import com.example.andhika.pbp_android.model.RegisterRequest
+import com.example.andhika.pbp_android.model.RegisterResponse
 import com.example.andhika.pbp_android.section.login.LoginActivity
 import com.example.andhika.pbp_android.showShortToast
 import com.google.android.gms.tasks.OnCompleteListener
@@ -65,11 +66,14 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
     override fun dismissLoading() {
     }
 
-    override fun goToMain() {
+    override fun goToMain(response: RegisterResponse) {
+        if (response.success)
+            redirectLoginScreen()
+        else
+            Toast.makeText(this,"Username sudah ada",Toast.LENGTH_SHORT).show()
     }
 
     override fun showError(any: Any) {
-        redirectLoginScreen()
     }
 
     private fun registerNewEmail(email: String, password: String) {

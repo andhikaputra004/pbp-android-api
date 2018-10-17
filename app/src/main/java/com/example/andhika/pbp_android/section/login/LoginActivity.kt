@@ -2,7 +2,7 @@ package com.example.andhika.pbp_android.section.login
 
 import android.content.Intent
 import android.support.v7.widget.Toolbar
-import android.util.Log
+import android.widget.Toast
 import com.example.andhika.pbp_android.R
 import com.example.andhika.pbp_android.base.BaseActivity
 import com.example.andhika.pbp_android.model.LoginRequest
@@ -29,7 +29,7 @@ class LoginActivity : BaseActivity(), LoginContract.View {
 
     override fun onSetupLayout() {
         setContentView(R.layout.activity_login)
-        setupToolbarTitleNoBack(toolbar_layout as Toolbar,title = R.string.txt_login)
+        setupToolbarTitleNoBack(toolbar_layout as Toolbar, title = R.string.txt_login)
     }
 
     override fun onViewReady() {
@@ -48,11 +48,11 @@ class LoginActivity : BaseActivity(), LoginContract.View {
         }
 
         btn_login.setOnClickListener {
-            presenter.postLogin(LoginRequest(et_username.text.toString(),et_password.text.toString()))
+            presenter.postLogin(LoginRequest(et_username.text.toString(), et_password.text.toString()))
         }
 
         tv_sign_up.setOnClickListener {
-            startActivity(Intent(this@LoginActivity,RegisterActivity::class.java))
+            startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
         }
     }
 
@@ -63,11 +63,14 @@ class LoginActivity : BaseActivity(), LoginContract.View {
     }
 
     override fun goToMain(response: LoginResponse) {
-        startActivity(Intent(this@LoginActivity,MainActivity::class.java))
+        if (response.success)
+            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+        else
+            Toast.makeText(this@LoginActivity, "ID/Password salah", Toast.LENGTH_SHORT).show()
     }
 
     override fun showError(any: Any) {
-        Log.d("DHIKA", "error: $any");
+
     }
 
 

@@ -41,7 +41,7 @@ class AddEventActivity : BaseActivity(), AddEventContract.View {
         }
         val bundle = intent.extras
         btn_add.setOnClickListener {
-            presenter.insertEvent(AddEventRequest(et_name.text.toString(), bundle.getInt("id"), et_tgl.text.toString(), et_detail_event.text.toString()))
+            presenter.insertEvent(AddEventRequest(et_name.text.toString(), bundle.getInt("id"), et_tgl.text.toString(), et_detail_event.text.toString(),1))
         }
     }
 
